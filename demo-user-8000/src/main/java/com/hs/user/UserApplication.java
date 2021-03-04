@@ -2,13 +2,17 @@ package com.hs.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-@SpringBootApplication
 /***
  * @author 华生
  * 用户操作
  * UserApplication
  */
+@EnableDiscoveryClient
+//@EnableFeignClients
+@SpringBootApplication
 public class UserApplication {
 
     public static void main(String[] args) {

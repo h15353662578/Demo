@@ -10,11 +10,24 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.195.129:8848,192.168.195.129:8847,192.168.195.129:8849
-#      config:
-#        server-addr: 192.168.195.129:8848,192.168.195.129:8847,192.168.195.129:8849
+        server-addr: 192.168.195.129:80
+    sentinel:
+      transport:
+        dashboard: 192.168.195.129:8858
+        port: 8719
+#        client-ip: 192.168.195.129:8858
+      datasource:
+        ds1:
+          nacos:
+            server-addr: 192.168.195.129:80
+            dataId: user-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
+
   application:
     name: user-service
+
 dubbo:
   scan:
     base-packages: com.hs.user.service
@@ -25,3 +38,12 @@ dubbo:
     address: spring-cloud://localhost
   cloud:
     subscribed-services: spring-cloud-dubbo-user
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  sentinel:
+    enabled: true
