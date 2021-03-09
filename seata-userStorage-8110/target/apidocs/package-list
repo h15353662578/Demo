@@ -1,0 +1,7 @@
+com.hs.userStorage
+com.hs.userStorage.config
+com.hs.userStorage.controller
+com.hs.userStorage.entity
+com.hs.userStorage.mapper
+com.hs.userStorage.service
+com.hs.userStorage.service.impl

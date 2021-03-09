@@ -1,0 +1,7 @@
+com.hs.userconsumer
+com.hs.userconsumer.config
+com.hs.userconsumer.controller
+com.hs.userconsumer.entity
+com.hs.userconsumer.mapper
+com.hs.userconsumer.service
+com.hs.userconsumer.service.impl

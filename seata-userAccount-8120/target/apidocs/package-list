@@ -1,0 +1,7 @@
+com.hs.useraccount
+com.hs.useraccount.config
+com.hs.useraccount.controller
+com.hs.useraccount.entity
+com.hs.useraccount.mapper
+com.hs.useraccount.service
+com.hs.useraccount.service.impl

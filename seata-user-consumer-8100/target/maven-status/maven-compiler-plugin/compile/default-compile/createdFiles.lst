@@ -1,0 +1,11 @@
+com\hs\userconsumer\config\MybatisConfig.class
+com\hs\userconsumer\entity\CommonResult.class
+com\hs\userconsumer\UserConsumer8100.class
+com\hs\userconsumer\service\UserStorageService.class
+com\hs\userconsumer\service\impl\UserOrderServiceImpl.class
+com\hs\userconsumer\config\DataSourceProxyConfig.class
+com\hs\userconsumer\service\UserOrderService.class
+com\hs\userconsumer\entity\UserOrder.class
+com\hs\userconsumer\controller\UserOrderController.class
+com\hs\userconsumer\mapper\UserOrderMapper.class
+com\hs\userconsumer\service\UserAccountService.class
