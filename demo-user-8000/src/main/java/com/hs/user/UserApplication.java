@@ -3,7 +3,6 @@ package com.hs.user;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /***
  * @author 华生
@@ -11,7 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * UserApplication
  */
 @EnableDiscoveryClient
-//@EnableFeignClients
 @SpringBootApplication
 public class UserApplication {
 

@@ -15,7 +15,6 @@ spring:
       transport:
         dashboard: 192.168.195.129:8858
         port: 8719
-#        client-ip: 192.168.195.129:8858
       datasource:
         ds1:
           nacos:
@@ -24,7 +23,9 @@ spring:
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow
-
+#    alibaba:
+#      seata:
+#        tx-service-group: hs_demo_tx_group
   application:
     name: user-service
 
@@ -39,11 +40,11 @@ dubbo:
   cloud:
     subscribed-services: spring-cloud-dubbo-user
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: "*"
 feign:
   sentinel:
     enabled: true
