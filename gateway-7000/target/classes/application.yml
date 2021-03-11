@@ -6,20 +6,51 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.195.129:8848,192.168.195.129:8847,192.168.195.129:8849
+        server-addr: 192.168.195.129:80
       config:
-        server-addr: 192.168.195.129:8848,192.168.195.129:8847,192.168.195.129:8849
+        server-addr: 192.168.195.129:80
     gateway:
-      routes:                       # 路由数组[路由 就是指定当请求满足什么条件的时候转到哪个微服务]
-        - id: demo_route          # 当前路由的标识, 要求唯一
-          uri: lb://user-service  # lb指的是从nacos中按照名称获取微服务,并遵循负载均衡策略
-          predicates:                # 断言(就是路由转发要满足的条件)
-            - Path=/demo-user/**       # 当请求路径满足Path指定的规则时,才进行路由转发
-          filters:                   # 过滤器,请求在传递过程中可以通过过滤器对其进行一定的修改
-            - StripPrefix=1           # 转发之前去掉1层路径
-#        - id: user_route
-#          uri: lb://demo-user
+      routes: # 路由数组
+        - id: user-order-service # 路由的id,没有规定规则但要求唯一,建议配合服务名
+          uri: http://localhost:8100 #匹配后提供服务的路由地址
+          predicates: # 断言，路径相匹配的进行路由
+            - Path=/order/** #**为通配符，因为我们controller方法中get后面跟查询的id
+        - id: user-service
+          uri: http://localhost:8000
+          predicates:
+            - Path=/user/**
+        - id: product-service
+          uri: http://localhost:8500
+          predicates:
+            - Path=/product/**
+#        - id: rocketMq-service
+#          uri: http://localhost:8300
 #          predicates:
-#            - Path=/demo-user/**
-#          filters:
-            - StripPrefix=1
+#            = Path=/rocketMq/**
+      filter:
+        remove-hop-by-hop:
+          headers:
+            - trailer
+            - te
+            - keep-alive
+            - transfer-encoding
+            - upgrade
+            - proxy-authenticate
+            - connection
+            - proxy-authorization
+            - x-application-context
+            # 以下是去掉服务层面定义的跨域
+            - access-control-allow-credentials
+            - access-control-allow-headers
+            - access-control-allow-methods
+            - access-control-allow-origin
+            - access-control-max-age
+            - vary
+      globalcors:
+       corsConfigurations:
+        '[/**]':
+          allowCredentials: true
+          allowedOrigins: "*"
+          allowedHeaders: "*"
+          allowedMethods: "*"
+          maxAge: 3628800

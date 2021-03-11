@@ -7,19 +7,25 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="seata-userStorage-8110" />
+        <module name="seata-user-consumer-8100" />
+        <module name="rocketMq-provider-8310" />
+        <module name="seata-userAccount-8120" />
+        <module name="demo-product-8500" />
+        <module name="roctkeMq-conosumer-8300" />
         <module name="demo-common" />
         <module name="demo-user-8000" />
-        <module name="seata-user-consumer-8100" />
         <module name="gateway-7000" />
-        <module name="seata-userAccount-8120" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo-common" options="-parameters" />
+      <module name="demo-product-8500" options="-parameters" />
       <module name="demo-user-8000" options="-parameters" />
       <module name="gateway-7000" options="-parameters" />
+      <module name="rocketMq-provider-8310" options="-parameters" />
+      <module name="roctkeMq-conosumer-8300" options="-parameters" />
       <module name="seata-user-consumer-8100" options="-parameters" />
       <module name="seata-userAccount-8120" options="-parameters" />
       <module name="seata-userStorage-8110" options="-parameters" />

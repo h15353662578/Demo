@@ -2,8 +2,11 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/demo-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-product-8500/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-user-8000/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/gateway-7000/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/rocketMq-provider-8310/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/roctkeMq-conosumer-8300/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-user-consumer-8100/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-userAccount-8120/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/seata-userStorage-8110/src/main/java" charset="UTF-8" />

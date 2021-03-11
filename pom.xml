@@ -19,6 +19,9 @@
         <module>seata-user-consumer-8100</module>
         <module>seata-userStorage-8110</module>
         <module>seata-userAccount-8120</module>
+        <module>roctkeMq-conosumer-8300</module>
+        <module>demo-product-8500</module>
+        <module>rocketMq-provider-8310</module>
     </modules>
 
     <properties>
@@ -132,11 +135,6 @@
             <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
             <version>2.2.3.RELEASE</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.alibaba.csp</groupId>-->
-<!--            <artifactId>sentinel-core</artifactId>-->
-<!--            <version>1.8.1</version>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.alibaba.csp</groupId>
             <artifactId>sentinel-datasource-nacos</artifactId>

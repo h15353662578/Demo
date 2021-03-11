@@ -33,7 +33,6 @@ public class UserOrderServiceImpl implements UserOrderService {
 
     /**
      * 创建订单->调用库存服务扣减库存->调用账户服务扣减账户余额->修改订单状态
-     * 简单说:
      * 下订单->减库存->减余额->改状态
      * GlobalTransactional seata开启分布式事务,异常时回滚,name保证唯一即可
      *
@@ -41,7 +40,7 @@ public class UserOrderServiceImpl implements UserOrderService {
      */
 
     @Override
-    @GlobalTransactional(name = "seata-user-order-service", rollbackFor = Exception.class)
+    @GlobalTransactional(name = "user-order-service", rollbackFor = Exception.class)
     public void create(UserOrder userOrder) {
         // 1 新建订单
         log.info("----->开始新建订单");

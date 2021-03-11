@@ -1,5 +1,6 @@
 package com.hs.userconsumer.controller;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.hs.userconsumer.entity.CommonResult;
 import com.hs.userconsumer.entity.UserOrder;
 import com.hs.userconsumer.service.UserOrderService;
@@ -24,10 +25,11 @@ public class UserOrderController {
 
     /**
      * 创建订单
-     * http://localhost:8100/order/create?userId=用户ID&productId=商品ID&count=消费件数&money=花费余额
+     * http://localhost:7000/order/create?userId=用户ID&productId=商品ID&count=消费件数&money=花费余额
      * @param userOrder
      * @return
      */
+    @SentinelResource("/order/create")
     @GetMapping("/order/create")
     public CommonResult create(UserOrder userOrder) {
         userOrderService.create(userOrder);
