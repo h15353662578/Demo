@@ -1,0 +1,17 @@
+server:
+  port: 8300
+rocketmq:
+  name-server: 192.168.195.129:9876
+  producer:
+    group: hs-mq-order-provider
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 000000
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.195.129:80
+        service: Mq-consumer

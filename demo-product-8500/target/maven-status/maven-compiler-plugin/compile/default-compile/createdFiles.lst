@@ -1,0 +1,5 @@
+com\hs\product\mapper\ProductMapper.class
+com\hs\product\service\impl\ProductServiceImpl.class
+com\hs\product\service\ProductService.class
+com\hs\product\controller\ProductController.class
+com\hs\product\Product8500.class

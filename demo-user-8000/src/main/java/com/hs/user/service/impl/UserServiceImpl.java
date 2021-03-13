@@ -4,7 +4,6 @@ import com.hs.entity.User;
 
 import com.hs.user.mapper.UserMapper;
 import com.hs.user.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

@@ -1,0 +1,5 @@
+com.hs.product
+com.hs.product.controller
+com.hs.product.mapper
+com.hs.product.service
+com.hs.product.service.impl

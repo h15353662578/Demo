@@ -18,4 +18,5 @@ public interface ProductService {
      */
     public List<Product>findAll();
 
+    public int save(Product product);
 }

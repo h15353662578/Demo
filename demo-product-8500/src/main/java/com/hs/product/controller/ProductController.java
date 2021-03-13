@@ -4,6 +4,7 @@ import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.hs.entity.Product;
 import com.hs.product.service.ProductService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +29,11 @@ public class ProductController {
     @SentinelResource("/findAll")
     public List<Product>findAll(){
         return productService.findAll();
+    }
+
+    @PostMapping("/save")
+    @SentinelResource("/save")
+    public int save(Product product){
+        return productService.save(product);
     }
 }
