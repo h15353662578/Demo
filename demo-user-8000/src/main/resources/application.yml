@@ -11,6 +11,7 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.195.129:80
+        service: user
     sentinel:
       transport:
         dashboard: 192.168.195.129:8858

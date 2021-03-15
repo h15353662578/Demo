@@ -1,14 +1,11 @@
 server:
   port: 7000
 spring:
-  application:
-    name: demo-gateway
   cloud:
     nacos:
       discovery:
         server-addr: 192.168.195.129:80
-      config:
-        server-addr: 192.168.195.129:80
+        service: gateway
     gateway:
       routes: # 路由数组
         - id: user-order-service # 路由的id,没有规定规则但要求唯一,建议配合服务名
