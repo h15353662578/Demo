@@ -6,10 +6,15 @@ rocketmq:
     group: hs-mq-order-provider
 spring:
   datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/cloud?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 000000
-    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    url2: jdbc:mysql://localhost:3306/user_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    type: com.alibaba.druid.pool.DruidDataSource
+    data-username: root
+    data-password: 000000
   cloud:
     nacos:
       discovery:

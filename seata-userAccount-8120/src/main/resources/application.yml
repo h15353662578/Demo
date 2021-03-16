@@ -1,6 +1,5 @@
 server:
   port: 8120
-
 spring:
   application:
     name: user-account-service

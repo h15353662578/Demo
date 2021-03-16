@@ -1,5 +1,6 @@
 package com.hs.userconsumer.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.hs.userconsumer.entity.UserOrder;
 
 import org.apache.ibatis.annotations.Mapper;
@@ -13,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
  */
 
 @Mapper
-public interface UserOrderMapper {
+public interface UserOrderMapper extends BaseMapper {
 
     /***
      * 新建订单

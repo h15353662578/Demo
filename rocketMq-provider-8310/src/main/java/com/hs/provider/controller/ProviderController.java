@@ -1,6 +1,7 @@
 package com.hs.provider.controller;
 
 import com.hs.entity.MqOrder;
+import com.hs.entity.UserOrder;
 import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,8 +41,16 @@ public class ProviderController {
         mqOrder.setBuyerName("华生");
         mqOrder.setId(1);
         mqOrder.setBuyerPhone("15353662578");
-        rocketMQTemplate.convertAndSend("mqOrder",mqOrder);
+        rocketMQTemplate.convertAndSend("hs-order-topic", mqOrder);
         System.out.println("Test生产者");
+        return "ok";
+    }
+
+    @GetMapping("/test")
+    public String test(){
+        UserOrder userOrder = new UserOrder();
+        rocketMQTemplate.convertAndSend("hs-topic",userOrder);
+        System.out.println("UserTest");
         return "ok";
     }
 

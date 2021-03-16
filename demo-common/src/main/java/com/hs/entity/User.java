@@ -29,21 +29,6 @@ public class User implements Serializable {
 
     private String sexStr;
 
-//    public void setSexStr(String sexStr) {
-//        this.sexStr = sexStr;
-//    }
-//
-//    public String getSexStr() {
-//        if (sex!=null){
-//            if (sex == 1){
-//                sexStr = "男";
-//            }else if (sex == 0){
-//                sexStr = "女";
-//            }
-//        }
-//        return sexStr;
-//    }
-
     public String getSexStr() {
         if (sex!=null){
             if (sex == 1){

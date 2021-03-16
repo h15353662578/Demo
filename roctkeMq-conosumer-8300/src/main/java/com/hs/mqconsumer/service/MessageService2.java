@@ -1,6 +1,6 @@
 package com.hs.mqconsumer.service;
 
-import com.hs.entity.MqOrder;
+import com.hs.entity.UserOrder;
 import org.apache.rocketmq.spring.annotation.RocketMQMessageListener;
 import org.apache.rocketmq.spring.core.RocketMQListener;
 import org.springframework.stereotype.Service;
@@ -13,13 +13,13 @@ import org.springframework.stereotype.Service;
  */
 
 @Service
-@RocketMQMessageListener(consumerGroup = "hs-mq-order-provider",topic = "hs-order-topic")
-public class MessageService implements RocketMQListener<MqOrder> {
+@RocketMQMessageListener(consumerGroup = "hs-order-provider",topic = "hs-topic")
+public class MessageService2 implements RocketMQListener<UserOrder> {
 
     @Override
-    public void onMessage(MqOrder mqOrder) {
+    public void onMessage(UserOrder userOrder) {
         System.out.println("我是消费者，下面是我收到的数据");
-        System.out.println(mqOrder);
+        System.out.println(userOrder);
     }
 
 }
